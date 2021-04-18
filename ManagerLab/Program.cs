@@ -7,18 +7,14 @@ namespace ManagerLab
         static void Main(string[] args)
         {
             var firstManager = new Manager();
-            var secondManager = new Manager();
-
-            firstManager.SetSurname("Migal");
-            firstManager.SetAge(19);
-            firstManager.SetIsGoes(true);
-
-            secondManager.SetSurname("Feduk");
-            secondManager.SetAge(20);
-            secondManager.SetIsGoes(false);
+            var secondManager = new Manager("Migol");
+            var thirdManager = new Manager("Feduk", 18, false);
+            var foruthManager = new Manager(thirdManager);
 
             firstManager.PrintAboutObject();
             secondManager.PrintAboutObject();
+            thirdManager.PrintAboutObject();
+            foruthManager.PrintAboutObject();
         }
     }
 }
